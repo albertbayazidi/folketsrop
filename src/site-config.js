@@ -6,12 +6,16 @@ export const siteConfig = {
 
   navLinks: [
       {
-        text: 'Cv',
-        href: '/Cv', 
+        text: 'Alt',
+        href: '/', 
       },
       {
-        text: 'Projects',
-        href: '/Projects',
+        text: 'Klasse',
+        href: '/Klasse', 
+      },
+      {
+        text: 'Utenriks',
+        href: '/Utenriks',
       },
     ],
 }
