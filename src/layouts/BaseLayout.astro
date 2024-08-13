@@ -1,0 +1,26 @@
+---
+import { fade } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
+import BaseHead from "../components/BaseHead.astro";
+
+const { ...head } = Astro.props;
+---
+
+<!doctype html>
+<html>
+  <head>
+    <BaseHead {...head} />
+    <ViewTransitions />
+  </head>
+  <body class="mx-2">
+    <main transition:animate={fade({ duration: "0.4s" })}>
+      <div class="flex mt-5">
+        <img src="../../public/faveicon-temp.png" width="10%" class="mr-2" />
+        <a href="/" class="my-auto">
+          <h1 class="my-auto text-3xl">Folketsrop</h1>
+        </a>
+      </div>
+      <slot />
+    </main>
+  </body>
+</html>

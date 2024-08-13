@@ -1,0 +1,38 @@
+---
+import siteConfig from '../site-config'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: { src: string; alt?: string }
+  pageType?: 'website' | 'article'
+}
+
+const { description = '' } = Astro.props
+
+const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ')
+
+const canonicalURL = new URL(Astro.request.url, Astro.site)
+
+function formatCanonicalURL(url: string | URL) {
+  const path = url.toString()
+  const hasQueryParams = path.includes('?')
+  if (hasQueryParams) path.replace(/\/?$/, '')
+  return path.replace(/\/?$/, hasQueryParams ? '' : '/')
+}
+---
+
+<!-- High Priority Global Metadata -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{title}</title>
+<meta name="generator" content={Astro.generator} />
+
+<!-- Low Priority Global Metadata -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
+
+<!-- Page Metadata -->
+<link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
+<meta name="description" content={description} />
