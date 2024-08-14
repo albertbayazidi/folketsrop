@@ -1,8 +1,8 @@
 ---
-title: "Tekst_1"
+title: "Tekst_2"
 date: "14-08-2024"
 description: "some text"
-image: "../../public/test_bilde.png"
+image: "../../public/faveicon-temp.png"
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 
