@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+// Define getStaticPaths function to generate all the paths
+export async function getStaticPaths() {
+  const klasseposts = await getCollection("Klasse");
+  const utenriksPosts = await getCollection("Utenriks");
+
+  const allPosts = [...klasseposts, ...utenriksPosts];
+
+  // Generate paths for each post
+  return allPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+// Get the post data based on the slug from Astro props
+const { slug } = Astro.params;
+const klasseposts = await getCollection("Klasse");
+const utenriksPosts = await getCollection("Utenriks");
+
+const allPosts = [...klasseposts, ...utenriksPosts];
+
+const post = allPosts.find((post) => post.slug === slug);
+
+if (!post) {
+  throw new Error(`Post not found for slug: ${slug}`);
+}
+
+const { Content } = await post.render();
+---
+
+<ArticleLayout>
+  <Content />
+</ArticleLayout>

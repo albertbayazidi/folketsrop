@@ -8,7 +8,7 @@ interface Props {
 const { title, description, image } = Astro.props;
 ---
 
-<div class="relative w-full sm:w-96 max-h-56 overflow-hidden group">
+<div class="relative w-full max-w-96 max-h-56 overflow-hidden group">
   <img
     src={image}
     alt={`img of ${title}`}

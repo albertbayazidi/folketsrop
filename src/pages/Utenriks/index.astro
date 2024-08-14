@@ -1,6 +1,28 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Navbar from "../../components/Navbar.astro";
+import NewsCard from "../../components/NewsCard.astro";
+
+const foreignAffairsPosts = await getCollection("Utenriks");
+
+
+foreignAffairsPosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+);
 ---
 
-<BaseLayout currentTab="Utenriks"> nr3 </BaseLayout>
+<BaseLayout currentTab="Utenriks">
+  {
+    foreignAffairsPosts.map((post) => (
+    <a class="inline-block m-1"
+        href={`/Klasse/${post.slug}/`}
+  >
+        <NewsCard
+          title={post.data.title}
+          description={post.data.description}
+          image={post.data.image}
+        />
+      </a>
+    ))
+  }
+</BaseLayout>

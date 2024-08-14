@@ -1,5 +1,5 @@
 ---
-title: "Tekst_1"
+title: "Tekst_4"
 date: "11-08-2024"
 description: "some text"
 image: "../../public/test_bilde.png"

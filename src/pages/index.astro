@@ -16,7 +16,9 @@ allPosts.sort(
 <BaseLayout currentTab="Alt">
   {
     allPosts.map((post) => (
-    <a class="inline-block">
+    <a class="inline-block m-1"
+        href={`/Klasse/${post.slug}/`}
+  >
         <NewsCard
           title={post.data.title}
           description={post.data.description}
