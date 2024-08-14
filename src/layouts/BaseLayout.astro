@@ -4,6 +4,10 @@ import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
 
+interface Props {
+  currentTab: string;
+}
+
 const { currentTab, ...head } = Astro.props;
 ---
 

@@ -6,7 +6,6 @@ interface Props {
 }
 
 const navLinks = siteConfig.navLinks || [];
-const currentTab = Astro.props;
 ---
 
 <header id="header" class="flex">
@@ -16,11 +15,14 @@ const currentTab = Astro.props;
     {
       navLinks.map((link) => (
         <a
-          class="text-xl pb-1 border-b-2 border-opacity-0 border-black hover:border-opacity-100 transition-colors duration-150 ease-linear"
+          class={`text-xl pb-1 border-b-2 ${
+            link.text === Astro.props.currentTab
+              ? "border-opacity-100 border-black"
+              : "border-opacity-0 border-black hover:border-opacity-100"
+          } transition-colors duration-150 ease-linear`}
           href={link.href}
         >
           {link.text}
-          {currentTab}
         </a>
       ))
     }
