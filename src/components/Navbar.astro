@@ -1,11 +1,18 @@
 ---
 import siteConfig from "../site-config";
 
+interface Props {
+  currentTab: string;
+}
+
 const navLinks = siteConfig.navLinks || [];
+const currentTab = Astro.props;
 ---
 
 <header id="header" class="flex">
-  <nav class="flex flex-wrap gap-x-6 pt-8 w-96 w border-b-2 border-gray-200 mb-10">
+  <nav
+    class="flex flex-wrap gap-x-6 pt-8 w-96 w border-b-2 border-gray-200 mb-10"
+  >
     {
       navLinks.map((link) => (
         <a
@@ -13,6 +20,7 @@ const navLinks = siteConfig.navLinks || [];
           href={link.href}
         >
           {link.text}
+          {currentTab}
         </a>
       ))
     }

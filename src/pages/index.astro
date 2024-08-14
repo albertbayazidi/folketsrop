@@ -1,13 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import siteConfig from "../site-config";
-import Navbar from "../components/Navbar.astro";
 import NewsCard from "../components/NewsCard.astro";
 ---
 
-<BaseLayout>
-  <Navbar />
-  <a href="https://www.google.com/">
-      <NewsCard  title={"Staen er wak"}, description={"Ligma balls"}, image={"../../public/test_bilde.png"} />
-  </a>
-</BaseLayout>
+<BaseLayout currentTab="Alt"> nr1 </BaseLayout>
