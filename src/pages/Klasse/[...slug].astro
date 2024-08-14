@@ -5,32 +5,36 @@ import ArticleLayout from "../../layouts/ArticleLayout.astro";
 // Define getStaticPaths function to generate all the paths
 export async function getStaticPaths() {
   const klasseposts = await getCollection("Klasse");
-  const utenriksPosts = await getCollection("Utenriks");
 
-  const allPosts = [...klasseposts, ...utenriksPosts];
-
-  // Generate paths for each post
-  return allPosts.map((post) => ({
+  return klasseposts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
-// Get the post data based on the slug from Astro props
 const { slug } = Astro.params;
 const klasseposts = await getCollection("Klasse");
-const utenriksPosts = await getCollection("Utenriks");
 
-const allPosts = [...klasseposts, ...utenriksPosts];
-
-const post = allPosts.find((post) => post.slug === slug);
-
-if (!post) {
-  throw new Error(`Post not found for slug: ${slug}`);
-}
-
-const { Content } = await post.render();
+const post = klasseposts.find((post) => post.slug === slug);
 ---
 
 <ArticleLayout>
-  <Content />
+  {
+    post ? (
+      <article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <header class="mb-4">
+          <h1 class="text-4xl font-bold text-gray-800">{post.data.title}</h1>
+          <p class="text-sm text-gray-500 mt-2">{post.data.date}</p>
+        </header>
+        <div class="prose prose-lg text-gray-700 leading-relaxed">
+          {post.body}
+        </div>
+      </article>
+    ) : (
+      <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <p class="text-xl text-gray-800">
+          Sorry, the post you're looking for doesn't exist.
+        </p>
+      </div>
+    )
+  }
 </ArticleLayout>

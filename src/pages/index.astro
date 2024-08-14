@@ -6,7 +6,10 @@ import NewsCard from "../components/NewsCard.astro";
 const classePosts = await getCollection("Klasse");
 const foreignAffairsPosts = await getCollection("Utenriks");
 
-const allPosts = [...classePosts, ...foreignAffairsPosts];
+const allPosts = [
+  ...classePosts.map(post => ({ ...post, collection: 'Klasse' })),
+  ...foreignAffairsPosts.map(post => ({ ...post, collection: 'Utenriks' }))
+];
 
 allPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
@@ -16,9 +19,9 @@ allPosts.sort(
 <BaseLayout currentTab="Alt">
   {
     allPosts.map((post) => (
-    <a class="inline-block m-1"
-        href={`/Klasse/${post.slug}/`}
-  >
+      <a class="inline-block m-1"
+        href={`/${post.collection}/${post.slug}/`}
+      >
         <NewsCard
           title={post.data.title}
           description={post.data.description}

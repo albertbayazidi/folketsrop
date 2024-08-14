@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+export async function getStaticPaths() {
+  const foreignAffairsPosts = await getCollection("Utenriks");
+
+  return foreignAffairsPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const foreignAffairsPosts = await getCollection("Utenriks");
+
+const post = foreignAffairsPosts.find((post) => post.slug === slug);
+---
+
+<ArticleLayout>
+  {
+    post ? (
+      <article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <header class="mb-4">
+          <h1 class="text-4xl font-bold text-gray-800">{post.data.title}</h1>
+          <p class="text-sm text-gray-500 mt-2">{post.data.date}</p>
+        </header>
+        <div class="prose prose-lg text-gray-700 leading-relaxed">
+          {post.body}
+        </div>
+      </article>
+    ) : (
+      <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+        <p class="text-xl text-gray-800">
+          Sorry, the post you're looking for doesn't exist.
+        </p>
+      </div>
+    )
+  }
+</ArticleLayout>
