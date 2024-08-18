@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import MainPageLayout from "../layouts/MainPageLayout.astro";
 import NewsCard from "../components/NewsCard.astro";
+import MainNewsCard from "../components/MainNewsCard.astro";
+import NewsList from "../components/NewsList.astro";
 
 const classePosts = await getCollection("Klasse");
 const foreignAffairsPosts = await getCollection("Utenriks");
@@ -15,18 +16,20 @@ const allPosts = [
 allPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
+
+const [mainNews, ...remainingposts] = allPosts;
 ---
 
-<MainPageLayout currentTab="Alt">
+<BaseLayout currentTab="Alt">
   {
-    allPosts.map((post) => (
-      <a class="inline-block m-1" href={`/${post.collection}/${post.slug}/`}>
-        <NewsCard
-          title={post.data.title}
-          description={post.data.description}
-          image={post.data.image}
-        />
-      </a>
-    ))
+    (
+      <MainNewsCard
+        title={mainNews.data.title}
+        description={mainNews.data.description}
+        image={mainNews.data.image}
+        url={`/${mainNews.collection}/${mainNews.slug}/`}
+      />
+    )
   }
-</MainPageLayout>
+  {(<NewsList remainingposts={remainingposts} />)}
+</BaseLayout>

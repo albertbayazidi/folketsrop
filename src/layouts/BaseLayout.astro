@@ -26,7 +26,9 @@ const { currentTab, ...head } = Astro.props;
     </div>
     <Navbar currentTab={currentTab} />
     <main transition:animate={fade({ duration: "0.25s" })}>
-      <div class="sm:w-threeNews">
+      <div
+        class="w-[calc(100vw-2*28px)] h-[calc(100vh-218px)] grid grid-cols-3 grid-flow-col gap-4"
+      >
         <slot />
       </div>
     </main>

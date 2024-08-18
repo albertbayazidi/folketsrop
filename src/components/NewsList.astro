@@ -1,0 +1,16 @@
+---
+import NewsCard from "./NewsCard.astro";
+const { remainingposts } = Astro.props;
+---
+
+<div class="col-span-1 overflow-y-auto">
+  {
+    remainingposts.map((post: any) => (
+      <a class="inline-block m-1" href={`/${post.collection}/${post.slug}/`}>
+        <div>
+          <img src={post.data.image} />
+        </div>
+      </a>
+    ))
+  }
+</div>
