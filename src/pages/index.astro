@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MainPageLayout from "../layouts/MainPageLayout.astro";
 import NewsCard from "../components/NewsCard.astro";
 
 const classePosts = await getCollection("Klasse");
@@ -16,7 +17,7 @@ allPosts.sort(
 );
 ---
 
-<BaseLayout currentTab="Alt">
+<MainPageLayout currentTab="Alt">
   {
     allPosts.map((post) => (
       <a class="inline-block m-1" href={`/${post.collection}/${post.slug}/`}>
@@ -28,4 +29,4 @@ allPosts.sort(
       </a>
     ))
   }
-</BaseLayout>
+</MainPageLayout>
