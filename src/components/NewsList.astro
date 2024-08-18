@@ -1,16 +1,28 @@
 ---
-import NewsCard from "./NewsCard.astro";
 const { remainingposts } = Astro.props;
 ---
 
-<div class="col-span-1 overflow-y-auto">
-  {
-    remainingposts.map((post: any) => (
-      <a class="inline-block m-1" href={`/${post.collection}/${post.slug}/`}>
-        <div>
-          <img src={post.data.image} />
-        </div>
-      </a>
-    ))
-  }
-</div>
+{
+  remainingposts.length > 0 && (
+    <div class="col-span-1 overflow-y-auto">
+      {remainingposts.map((post: any) => (
+        <a
+          class="block m-1 p-2 border rounded-lg hover:bg-gray-100"
+          href={`/${post.collection}/${post.slug}/`}
+        >
+          <div class="flex items-start space-x-4">
+            <img
+              class="w-[220px] h-[220px] object-cover rounded-lg"
+              src={post.data.image}
+              alt={post.data.title}
+            />
+            <div>
+              <h2 class="text-lg font-semibold">{post.data.title}</h2>
+              <p class="text-gray-600">{post.data.description}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  )
+}
