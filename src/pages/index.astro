@@ -7,8 +7,8 @@ const classePosts = await getCollection("Klasse");
 const foreignAffairsPosts = await getCollection("Utenriks");
 
 const allPosts = [
-  ...classePosts.map(post => ({ ...post, collection: 'Klasse' })),
-  ...foreignAffairsPosts.map(post => ({ ...post, collection: 'Utenriks' }))
+  ...classePosts.map((post) => ({ ...post, collection: "Klasse" })),
+  ...foreignAffairsPosts.map((post) => ({ ...post, collection: "Utenriks" })),
 ];
 
 allPosts.sort(
@@ -19,9 +19,7 @@ allPosts.sort(
 <BaseLayout currentTab="Alt">
   {
     allPosts.map((post) => (
-      <a class="inline-block m-1"
-        href={`/${post.collection}/${post.slug}/`}
-      >
+      <a class="inline-block m-1" href={`/${post.collection}/${post.slug}/`}>
         <NewsCard
           title={post.data.title}
           description={post.data.description}
