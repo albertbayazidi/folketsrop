@@ -2,13 +2,8 @@
 import { fade } from "astro:transitions";
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
-import Navbar from "../components/Navbar.astro";
 
-interface Props {
-  currentTab: string;
-}
-
-const { currentTab, ...head } = Astro.props;
+const { ...head } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,11 +12,11 @@ const { currentTab, ...head } = Astro.props;
     <BaseHead {...head} />
     <ViewTransitions />
   </head>
-  <body class="sm:px-96 ">
+  <body class="sm:px-96">
     <div class="flex mt-5">
-      <a href="/" class="inline-flex" >
-        <img src="../../faveicon.png" class="mr-2 w-20" />
-        <h1 class="font-bold text-4xl my-auto">Folketsrop</h1>
+      <a href="/" class="inline-flex items-center">
+        <img src="../../faveicon.png" class="mr-2 w-20 rounded-full" />
+        <h1 class="font-bold text-4xl">Folkets rop</h1>
       </a>
     </div>
     <main transition:animate={fade({ duration: "0.25s" })}>
