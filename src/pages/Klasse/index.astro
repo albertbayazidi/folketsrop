@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import NewsCard from "../../components/NewsCard.astro";
+import MainNewsCard from "../../components/MainNewsCard.astro";
+import NewsList from "../../components/NewsList.astro";
 
 const classePosts = await getCollection("Klasse");
 
@@ -14,14 +15,14 @@ const [mainNews, ...remainingposts] = classePosts;
 
 <BaseLayout currentTab="Klasse">
   {
-    remainingposts.map((post) => (
-      <a class="inline-block m-1" href={`/Klasse/${post.slug}/`}>
-        <NewsCard
-          title={post.data.title}
-          description={post.data.description}
-          image={post.data.image}
-        />
-      </a>
-    ))
+    (
+      <MainNewsCard
+        title={mainNews.data.title}
+        description={mainNews.data.description}
+        image={mainNews.data.image}
+        url={`/${mainNews.collection}/${mainNews.slug}/`}
+      />
+    )
   }
+  {(<NewsList remainingposts={remainingposts} />)}
 </BaseLayout>

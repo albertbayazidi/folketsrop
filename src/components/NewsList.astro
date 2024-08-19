@@ -4,13 +4,13 @@ const { remainingposts } = Astro.props;
 
 {
   remainingposts.length > 0 && (
-    <div class="col-span-1 overflow-y-auto">
+    <div class="col-span-1 overflow-y-auto max-h-[70vh]">
       {remainingposts.map((post: any) => (
         <a
           class="block m-1 p-2 border rounded-lg hover:bg-gray-100"
           href={`/${post.collection}/${post.slug}/`}
         >
-          <div class="flex items-start space-x-4">
+          <div class="flex items-start space-x-4 ">
             <img
               class="w-[220px] h-[220px] object-cover rounded-lg"
               src={post.data.image}

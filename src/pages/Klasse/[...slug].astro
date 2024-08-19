@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
-// Define getStaticPaths function to generate all the paths
 export async function getStaticPaths() {
   const klasseposts = await getCollection("Klasse");
 
