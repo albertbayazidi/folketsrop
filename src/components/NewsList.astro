@@ -17,8 +17,12 @@ const { remainingposts } = Astro.props;
               alt={post.data.title}
             />
             <div>
-              <h2 class="text-lg font-semibold">{post.data.title}</h2>
-              <p class="text-gray-600">{post.data.description}</p>
+              <h2 class="text-lg font-semibold overflow-hidden text-ellipsis">
+                {post.data.title}
+              </h2>
+              <p class="text-gray-600 overflow-hidden text-ellipsis">
+                {post.data.description}
+              </p>
             </div>
           </div>
         </a>

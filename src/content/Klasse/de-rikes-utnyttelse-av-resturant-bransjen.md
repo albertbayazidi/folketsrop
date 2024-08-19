@@ -1,5 +1,5 @@
 ---
-title: "Tekst_1"
+title: "Resturant bransjen utnyttes av de rike"
 date: "14-08-2024"
 description: "some text"
 image: "../../public/test_bilde.png"

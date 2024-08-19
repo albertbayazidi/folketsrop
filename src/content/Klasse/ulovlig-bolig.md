@@ -1,7 +1,7 @@
 ---
-title: "Tekst_2"
+title: "Utleier tjene mer på ulovlige boliger"
 date: "14-08-2024"
-description: "some text"
+description: "Litt tekst om saken"
 image: "../../public/faveicon.png"
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».

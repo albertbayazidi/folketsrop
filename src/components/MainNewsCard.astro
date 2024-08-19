@@ -9,8 +9,16 @@ interface Props {
 const { title, description, image, url } = Astro.props;
 ---
 
-<a class="col-span-2" href={url}>
-  <div>
-    <img src={image} />
-  </div>
-</a>
+<div class="col-span-2 content-center">
+  <a href={url} class="block mx-auto text-center">
+    <div class="inline-block">
+      <img class="block rounded-lg" src={image} />
+      <h2 class="text-3xl font-semibold overflow-hidden text-ellipsis">
+        {title}
+      </h2>
+      <p class="text-xl text-gray-600 overflow-hidden text-ellipsis">
+        {description}
+      </p>
+    </div>
+  </a>
+</div>

@@ -1,8 +1,8 @@
 ---
-title: "Krigen"
-date: "11-08-2024"
-description: "Tekst om saken"
-image: "../../public/gaza.jpeg"
+title: "Kina er verdensledene på grønn energi"
+date: "18-08-2024"
+description: "Mens USA nekter å ta på seg ansvar har kina blitt dominerende på grønn energi"
+image: "../../public/Standaert_solar-farm_web.jpg"
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 
