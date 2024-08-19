@@ -3,6 +3,7 @@ title: "Krigen"
 date: "11-08-2024"
 description: "Tekst om saken"
 image: "../../public/gaza.jpeg"
+tags: ["gaza","krig"]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 

@@ -7,6 +7,7 @@ const classCollection = defineCollection({
     date: z.string(),
     description:z.string().optional(),
     image: z.string().optional(),
+    tags: z.array(z.string()).optional(),
  }),
 })
 
@@ -17,6 +18,7 @@ const utenriksCollection = defineCollection({
     date: z.string(),
     description:z.string().optional(),
     image: z.string().optional(),
+    tags: z.array(z.string()).optional(),
  }),
 })
 
