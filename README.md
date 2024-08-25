@@ -1,3 +1,7 @@
+
+
+når man oppdaterer sørveren bruker man systemctl reload caddy
+
 liste over ting som må gjøre
 
 # ting som må gjøre# ting som må gjøre
