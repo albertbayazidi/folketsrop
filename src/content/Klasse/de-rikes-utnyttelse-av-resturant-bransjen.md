@@ -2,7 +2,7 @@
 title: "Resturant bransjen utnyttes av de rike"
 date: "14-08-2024"
 description: "some text"
-image: "../../public/test_bilde.png"
+image: "test_bilde.png"
 tags: ["klasse","resturant","rikdom"]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».

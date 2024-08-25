@@ -22,7 +22,7 @@ const post = klasseposts.find((post) => post.slug === slug);
       <div class="my-10 flex flex-col items-center">
         {post.data.image && (
           <img
-            src={post.data.image}
+            src={"/../../" + post.data.image}
             alt={post.data.title}
             class="max-w-[80vw] max-h-[30vh]  rounded-lg mb-6 object-cover"
           />

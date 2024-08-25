@@ -2,7 +2,7 @@
 title: "Utleier tjene mer på ulovlige boliger"
 date: "14-08-2024"
 description: "Litt tekst om saken"
-image: "../../public/faveicon.png"
+image: "faveicon.png"
 tags: ["klasse","resturant","rikdom"]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
