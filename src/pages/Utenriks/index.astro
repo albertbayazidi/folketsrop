@@ -18,7 +18,7 @@ const [mainNews, ...remainingposts] = foreignAffairsPosts;
       <MainNewsCard
         title={mainNews.data.title}
         description={mainNews.data.description}
-        image={"../" + mainNews.data.image}
+        image={mainNews.data.image}
         url={`/${mainNews.collection}/${mainNews.slug}/`}
       />
     )
