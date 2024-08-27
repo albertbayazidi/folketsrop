@@ -40,3 +40,4 @@ for img in "$directory"/*; do
 done
 
 echo "Conversion process completed."
+
