@@ -10,17 +10,17 @@ const { remainingposts } = Astro.props;
           class="block m-1 p-2 border rounded-lg hover:bg-gray-100"
           href={`/${post.collection}/${post.slug}/`}
         >
-          <div class="flex flex-wrap md:flex-none items-start space-x-4">
+          <div class="flex md:flex-wrap items-start space-x-4">
             <img
-              class="w-[220px] h-[220px]  mx-auto object-cover rounded-lg"
+              class="w-[100px] h-[100px]  md:w-[220px] md:h-[220px]  md:mx-auto object-cover rounded-lg"
               src={"../" + post.data.image}
               alt={post.data.title}
             />
-            <div class="w-80">
+            <div class="w-80 max-h-[6rem] overflow-hidden">
               <h2 class="text-xl md:text-lg font-semibold overflow-hidden text-ellipsis">
                 {post.data.title}
               </h2>
-              <p class="text-gray-600 overflow-hidden text-ellipsis">
+              <p class="text-gray-600  text-ellipsis">
                 {post.data.description}
               </p>
             </div>
