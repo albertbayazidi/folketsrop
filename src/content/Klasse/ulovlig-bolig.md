@@ -2,6 +2,7 @@
 title: "Utleier tjene mer på ulovlige boliger"
 date: "14-08-2024"
 description: "Litt tekst om saken"
+author: "test"
 image: "faveicon.webp"
 tags: ["klasse","resturant","rikdom"]
 ---

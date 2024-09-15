@@ -2,6 +2,7 @@
 title: "Resturant bransjen utnyttes av de rike"
 date: "14-08-2024"
 description: "some text"
+author: "test"
 image: "test_bilde.webp"
 tags: ["klasse","resturant","rikdom"]
 ---

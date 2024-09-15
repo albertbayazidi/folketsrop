@@ -1,6 +1,7 @@
 ---
 title: "Kina er verdensledene på grønn energi"
 date: "18-08-2024"
+author: "test"
 description: "Mens USA nekter å ta på seg ansvar har kina blitt dominerende på grønn energi"
 image: "Standaert_solar-farm_web.webp"
 tags: ["grønn","kina"]

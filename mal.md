@@ -1,9 +1,10 @@
 ---
 title: ""
-date: ""
-description: ""
-image: "test_bilde.webp"
-tags: ["mappeNavn","valgfritt","valgfritt"]
+date: "18-08-2024"
+author: "navn"
+description: "oppsumering av teksten"
+image: "Standaert_solar-farm_web.webp"
+tags: ["grønn","kina"]
 ---
 
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».

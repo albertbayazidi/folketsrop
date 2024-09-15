@@ -2,4 +2,20 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout currentTab="Om oss"> Tekst </BaseLayout>
+<BaseLayout currentTab="Om oss">
+  <div class="col-span-3">
+    <div class="my-10 flex flex-col items-center">
+      <article
+        class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10"
+      >
+        <header class="mb-4">
+          <h1 class="text-4xl font-bold text-gray-800">Om oss</h1>
+          <p class="text-sm text-gray-500 mt-2">
+            Vi er en gjeng studenter som ønsker å dekke nyheter fra et mer
+            historisk perspektiv hvor man får kontekst som man ellers mangler.
+          </p>
+        </header>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
