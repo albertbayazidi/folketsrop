@@ -11,27 +11,27 @@ export const siteConfig = {
     },
     {
       text: 'Politikk',
-      href: '/Politikk', 
+      href: '/politikk', 
     },
     {
       text: 'Næringsliv',
-      href: '/Naringsliv',
+      href: '/naringsliv',
     },
     {
       text: 'Utenriks',
-      href: '/Utenriks',
+      href: '/utenriks',
     },
     {
       text: 'Kultur',
-      href: '/Kultur'
+      href: '/kultur'
     },
     {
       text: 'Mening',
-      href: '/Mening'
+      href: '/mening'
     },
     {
       text: 'Om oss',
-      href: '/Om_oss'
+      href: '/om_oss'
     },
 
   ],
