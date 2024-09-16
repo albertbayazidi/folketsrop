@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
-const kulturCollection = defineCollection({
+const artikkelsCollection = defineCollection({
   type:'content',
   schema: z.object({
     title: z.string(),
@@ -8,43 +8,9 @@ const kulturCollection = defineCollection({
     author: z.string().optional(),
     description:z.string().optional(),
     image: z.string().optional(),
-    tags: z.array(z.string()).optional(),
- }),
-})
+    main_tag: z.string(),
+    sub_tags: z.array(z.string()).optional(),
 
-const politikkCollection = defineCollection({
-  type:'content',
-  schema: z.object({
-    title: z.string(),
-    date: z.string(),
-    author: z.string().optional(),
-    description:z.string().optional(),
-    image: z.string().optional(),
-    tags: z.array(z.string()).optional(),
- }),
-})
-
-const utenriksCollection = defineCollection({
-  type:'content',
-  schema: z.object({
-    title: z.string(),
-    date: z.string(),
-    author: z.string().optional(),
-    description:z.string().optional(),
-    image: z.string().optional(),
-    tags: z.array(z.string()).optional(),
- }),
-})
-
-const naringslivCollection = defineCollection({
-  type:'content',
-  schema: z.object({
-    title: z.string(),
-    date: z.string(),
-    author: z.string().optional(),
-    description:z.string().optional(),
-    image: z.string().optional(),
-    tags: z.array(z.string()).optional(),
  }),
 })
 
@@ -62,10 +28,7 @@ const meningCollection = defineCollection({
 })
 
 export const collections = {
-  'Politikk' : politikkCollection,
-  'Kultur': kulturCollection,
-  'Utenriks': utenriksCollection,
+  'artikkels' : artikkelsCollection,
   'Mening': meningCollection,
-  'Naringsliv': naringslivCollection,
 
 };

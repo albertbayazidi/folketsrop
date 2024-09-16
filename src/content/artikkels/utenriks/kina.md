@@ -4,7 +4,8 @@ date: "18-08-2024"
 author: "test"
 description: "Mens USA nekter å ta på seg ansvar har kina blitt dominerende på grønn energi"
 image: "Standaert_solar-farm_web.webp"
-tags: ["grønn","kina"]
+main_tag: "utenriks" 
+sub_tags: ["",""]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 

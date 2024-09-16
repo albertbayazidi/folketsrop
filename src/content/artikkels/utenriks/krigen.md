@@ -4,7 +4,8 @@ date: "11-08-2024"
 author: "test"
 description: "Tekst om saken"
 image: "gaza2.webp"
-tags: ["gaza","krig"]
+main_tag: "utenriks" 
+sub_tags: ["",""]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 

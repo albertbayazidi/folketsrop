@@ -4,12 +4,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainNewsCard from "../../components/MainNewsCard.astro";
 import NewsList from "../../components/NewsList.astro";
 
-const foreignAffairsPosts = await getCollection("Utenriks");
+const artikkelsPosts = await getCollection("artikkels");
 
-foreignAffairsPosts.sort(
+const filteredPosts = artikkelsPosts.filter(
+  (post) => post.data.main_tag === "utenriks",
+);
+
+filteredPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
-const [mainNews, ...remainingposts] = foreignAffairsPosts;
+
+const [mainNews, ...remainingposts] = filteredPosts;
 ---
 
 <BaseLayout currentTab="Utenriks">

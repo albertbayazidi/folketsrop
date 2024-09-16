@@ -4,7 +4,8 @@ date: "14-08-2024"
 description: "some text"
 author: "test"
 image: "test_bilde.webp"
-tags: ["klasse","resturant","rikdom"]
+main_tag: "politikk" 
+sub_tags: ["",""]
 ---
 «Ulovlig boenhet med manglende søknad om installering av bad/toalett og kjøkken».
 
