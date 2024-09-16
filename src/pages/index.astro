@@ -4,12 +4,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import MainNewsCard from "../components/MainNewsCard.astro";
 import NewsList from "../components/NewsList.astro";
 
-const classePosts = await getCollection("Klasse");
+const politikkPosts = await getCollection("Politikk");
+const kulturPosts = await getCollection("Kultur");
 const foreignAffairsPosts = await getCollection("Utenriks");
+const meningPosts = await getCollection("Mening");
+const naringslivPosts = await getCollection("Naringsliv");
 
 const allPosts = [
-  ...classePosts.map((post) => ({ ...post, collection: "Klasse" })),
+  ...politikkPosts.map((post) => ({ ...post, collection: "Politikk" })),
+  ...kulturPosts.map((post) => ({ ...post, collection: "Kultur" })),
   ...foreignAffairsPosts.map((post) => ({ ...post, collection: "Utenriks" })),
+  ...meningPosts.map((post) => ({ ...post, collection: "Mening" })),
+  ...naringslivPosts.map((post) => ({ ...post, collection: "Naringsliv" })),
 ];
 
 allPosts.sort(

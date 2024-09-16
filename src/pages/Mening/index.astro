@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MainNewsCard from "../../components/MainNewsCard.astro";
+import NewsList from "../../components/NewsList.astro";
+
+const classePosts = await getCollection("Mening");
+
+classePosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+);
+
+const [mainNews, ...remainingposts] = classePosts;
+---
+
+<BaseLayout currentTab="Mening">
+  {
+    (
+      <MainNewsCard
+        title={mainNews.data.title}
+        description={mainNews.data.description}
+        image={mainNews.data.image}
+        url={`/${mainNews.collection}/${mainNews.slug}/`}
+      />
+    )
+  }
+  {(<NewsList remainingposts={remainingposts} />)}
+</BaseLayout>

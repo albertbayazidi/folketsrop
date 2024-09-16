@@ -10,17 +10,30 @@ export const siteConfig = {
       href: '/', 
     },
     {
-      text: 'Klasse',
-      href: '/Klasse', 
+      text: 'Politikk',
+      href: '/Politikk', 
+    },
+    {
+      text: 'Næringsliv',
+      href: '/Naringsliv',
     },
     {
       text: 'Utenriks',
       href: '/Utenriks',
     },
     {
-      text: 'Om oss',
-      href: 'om_oss'
+      text: 'Kultur',
+      href: '/Kultur'
     },
+    {
+      text: 'Mening',
+      href: '/Mening'
+    },
+    {
+      text: 'Om oss',
+      href: '/Om_oss'
+    },
+
   ],
 }
 

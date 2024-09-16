@@ -4,16 +4,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainNewsCard from "../../components/MainNewsCard.astro";
 import NewsList from "../../components/NewsList.astro";
 
-const classePosts = await getCollection("Klasse");
+const classePosts = await getCollection("Kultur");
 
 classePosts.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  (a: any, b: any) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
 
 const [mainNews, ...remainingposts] = classePosts;
 ---
 
-<BaseLayout currentTab="Klasse">
+<BaseLayout currentTab="Kultur">
   {
     (
       <MainNewsCard
