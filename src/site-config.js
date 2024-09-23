@@ -27,7 +27,7 @@ export const siteConfig = {
     },
     {
       text: 'Mening',
-      href: '/mening'
+      href: '/respons'
     },
     {
       text: 'Om oss',

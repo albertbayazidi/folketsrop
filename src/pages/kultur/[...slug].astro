@@ -3,16 +3,23 @@ import { getCollection } from "astro:content";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
 export async function getStaticPaths() {
-  const kulturposts = await getCollection("Kultur");
+  const artikkelsPosts = await getCollection("artikkels");
 
-  return kulturposts.map((post) => ({
+  const filteredPosts = artikkelsPosts.filter(
+    (post) => post.data.main_tag === "kultur",
+  );
+
+  return filteredPosts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const kulturposts = await getCollection("Kultur");
-const post = kulturposts.find((post) => post.slug === slug);
+const allPosts = await getCollection("artikkels");
+
+const post = allPosts.find(
+  (post) => post.slug === slug && post.data.main_tag === "kultur",
+);
 ---
 
 <ArticleLayout>

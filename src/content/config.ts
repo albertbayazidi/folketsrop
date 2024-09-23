@@ -14,7 +14,7 @@ const artikkelsCollection = defineCollection({
  }),
 })
 
-const meningCollection = defineCollection({
+const responsCollection = defineCollection({
   type:'content',
   schema: z.object({
     title: z.string(),
@@ -29,6 +29,6 @@ const meningCollection = defineCollection({
 
 export const collections = {
   'artikkels' : artikkelsCollection,
-  'Mening': meningCollection,
+  'respons': responsCollection,
 
 };

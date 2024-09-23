@@ -3,16 +3,23 @@ import { getCollection } from "astro:content";
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
 export async function getStaticPaths() {
-  const meningposts = await getCollection("Mening");
+  const artikkelsPosts = await getCollection("artikkels");
 
-  return meningposts.map((post) => ({
+  const filteredPosts = artikkelsPosts.filter(
+    (post) => post.data.main_tag === "utenriks",
+  );
+
+  return filteredPosts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const meningposts = await getCollection("Mening");
-const post = meningposts.find((post) => post.slug === slug);
+const allPosts = await getCollection("artikkels");
+
+const post = allPosts.find(
+  (post) => post.slug === slug && post.data.main_tag === "utenriks",
+);
 ---
 
 <ArticleLayout>
@@ -23,14 +30,12 @@ const post = meningposts.find((post) => post.slug === slug);
           <img
             src={"/../../" + post.data.image}
             alt={post.data.title}
-            class="max-w-[80vw] max-h-[30vh]  rounded-lg mb-6 object-cover"
+            class="max-w-[80vw] max-h-[30vh] h-auto rounded-lg mb-6 object-cover"
           />
         )}
-        <article class="max-w-4xl w-full p-6 bg-white shadow-md rounded-lg mt-10">
+        <article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
           <header class="mb-4">
-            <h1 class="text-4xl font-bold text-gray-800 text-center">
-              {post.data.title}
-            </h1>
+            <h1 class="text-4xl font-bold text-gray-800">{post.data.title}</h1>
             <p class="text-sm text-gray-500 mt-2">{post.data.date}</p>
           </header>
           <div class="prose prose-lg text-gray-700 leading-relaxed">

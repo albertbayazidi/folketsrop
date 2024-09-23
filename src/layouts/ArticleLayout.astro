@@ -2,7 +2,6 @@
 import { fade } from "astro:transitions";
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
-import siteConfig from "../site-config";
 
 const { ...head } = Astro.props;
 ---
@@ -16,7 +15,10 @@ const { ...head } = Astro.props;
   <body class="sm:px-96 md:px-14">
     <div class="flex mt-5">
       <a href="/" class="inline-flex items-center">
-        <img src={"../../" + "faveicon.webp"} class="mr-2 w-20 rounded-full" />
+        <img
+          src={"../../../" + "faveicon.webp"}
+          class="mr-2 w-20 rounded-full"
+        />
         <h1 class="font-bold text-4xl">Folkets rop</h1>
       </a>
     </div>

@@ -13,14 +13,14 @@ artikkelsPosts.sort(
 const [mainNews, ...remainingposts] = artikkelsPosts;
 ---
 
-<BaseLayout currentTab="Alt">
+<BaseLayout currentTab="">
   {
     (
       <MainNewsCard
         title={mainNews.data.title}
         description={mainNews.data.description}
         image={mainNews.data.image}
-        url={`${mainNews.data.main_tag}/${mainNews.slug}/`}
+        url={`/${mainNews.data.main_tag}/${mainNews.slug}/`}
       />
     )
   }

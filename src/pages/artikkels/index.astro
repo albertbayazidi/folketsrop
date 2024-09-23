@@ -4,23 +4,23 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import MainNewsCard from "../../components/MainNewsCard.astro";
 import NewsList from "../../components/NewsList.astro";
 
-const classePosts = await getCollection("Mening");
+const artikkelsPosts = await getCollection("artikkels");
 
-classePosts.sort(
+artikkelsPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
 
-const [mainNews, ...remainingposts] = classePosts;
+const [mainNews, ...remainingposts] = artikkelsPosts;
 ---
 
-<BaseLayout currentTab="Mening">
+<BaseLayout currentTab="">
   {
     (
       <MainNewsCard
         title={mainNews.data.title}
         description={mainNews.data.description}
         image={mainNews.data.image}
-        url={`/${mainNews.collection}/${mainNews.slug}/`}
+        url={`/${mainNews.data.main_tag}/${mainNews.slug}/`}
       />
     )
   }
