@@ -13,7 +13,7 @@ const { remainingposts } = Astro.props;
           <div class="flex md:flex-wrap items-start space-x-4">
             <img
               class="w-[100px] h-[100px]  md:w-[220px] md:h-[220px]  md:mx-auto object-cover rounded-lg"
-              src={"../" + post.data.image}
+              src={"/" + post.data.image}
               alt={post.data.title}
             />
             <div class="w-80 max-h-[6rem] overflow-hidden">
