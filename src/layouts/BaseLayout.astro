@@ -4,17 +4,12 @@ import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/navigation_ui/Navbar.astro";
 import Ui from "../components/navigation_ui/Ui.astro";
-import CheckTheme from "../components/navigation_ui/CheckTheme.astro";
 
-interface Props {
-  currentTab: string;
-}
-
-const { currentTab, ...head } = Astro.props;
+const { head } = Astro.props;
 ---
 
 <!doctype html>
-<html class="bg-white text-gray-900 dark:bg-black dark:text-gray-100">
+<html class="bg-white text-gray-900 dark:bg-black dark:text-gray-100" lang="No">
   <head>
     <BaseHead {...head} />
     {/*<CheckTheme />*/}
@@ -24,7 +19,7 @@ const { currentTab, ...head } = Astro.props;
     <div class="flex mt-5 items-center">
       <Ui />
     </div>
-    <Navbar currentTab={currentTab} />
+    <Navbar />
     <main transition:animate={fade({ duration: "0.25s" })}>
       <div
         class="md:w-[calc(100vw-2*28px)] md:h-[calc(100vh-218px)] md:grid md:grid-cols-3 md:grid-flow-col md:gap-4"

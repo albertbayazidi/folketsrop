@@ -4,11 +4,10 @@ import siteConfig from "../site-config";
 interface Props {
   title?: string;
   description?: string;
-  image?: { src: string; alt?: string };
-  pageType?: "website" | "article";
+  image?: string;
 }
 
-const { description = "" } = Astro.props;
+const { description = "", image } = Astro.props;
 
 const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(" | ");
 
@@ -35,3 +34,5 @@ function formatCanonicalURL(url: string | URL) {
 <!-- Page Metadata -->
 <link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
 <meta name="description" content={description} />
+<meta property="og:image" content={image || "/favicon.webp"} />
+<meta property="og:image:url" content={image || "/favicon.webp"} />

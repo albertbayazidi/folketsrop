@@ -17,12 +17,11 @@ filteredPosts.sort(
 const [mainNews, ...remainingposts] = filteredPosts;
 ---
 
-<BaseLayout currentTab="">
+<BaseLayout>
   {
     (
       <MainNewsCard
         title={mainNews.data.title}
-        description={mainNews.data.description}
         image={mainNews.data.image}
         url={`/${mainNews.data.main_tag}/${mainNews.slug}/`}
       />

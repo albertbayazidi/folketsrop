@@ -1,0 +1,23 @@
+---
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+---
+
+<ArticleLayout title={"Obs..."}>
+  <div class="my-10 flex flex-col items-center">
+    <img
+      src={"/faveicon.webp"}
+      class="max-w-[80vw] max-h-[30vh] h-auto rounded-lg mb-6 object-cover"
+    />
+    <article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+      <header class="mb-4">
+        <h1 class="text-4xl font-bold text-gray-800">Obs....</h1>
+        <p class="text-sm text-gray-500 mt-2">
+          Ser ut som om det har skjedd en feil
+        </p>
+      </header>
+      <div class="prose prose-lg text-gray-700 leading-relaxed">
+        Om denne feilen vedvarer ta kontakt med Navn og epostadresse
+      </div>
+    </article>
+  </div>
+</ArticleLayout>

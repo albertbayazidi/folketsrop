@@ -23,7 +23,7 @@ const responsCollection = defineCollection({
     description:z.string().optional(),
     image: z.string().optional(),
     tags: z.array(z.string()).optional(),
-    respons_to: z.array(z.string()).optional(), 
+    respons_to: z.array(z.string()).optional(),
  }),
 })
 
