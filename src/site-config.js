@@ -26,10 +26,6 @@ export const siteConfig = {
       href: '/kultur'
     },
     {
-      text: 'Mening',
-      href: '/respons'
-    },
-    {
       text: 'Om oss',
       href: '/om_oss'
     },

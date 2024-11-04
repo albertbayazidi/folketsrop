@@ -21,3 +21,6 @@ To test the website locally, run the following commands in the terminal:
 npm i               # Only needs to be run the first time or if after big updates
 npm run dev
 ```
+
+All changes should be testet in dev before merged to main. Feel free to make a branch and work with the chage there before pusing it into dev, but remeber to test things 
+
