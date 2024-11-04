@@ -7,7 +7,7 @@ Here are some key things to know before you start writing an article:
    - We use a category system for articles, which means the folder you place your article in depends on its content.
 
 2. **Article Setup:**
-   - When starting a new article, feel free to use `mal.md` as a starting point.
+   - When starting a new article, feel free to use `template.md` as a starting point.
 
 3. **Image Use:**
    - Make sure to use high-resolution images. If the image is not available in high resolution, you can use this site to improve quality: [https://www.iloveimg.com/upscale-image](https://www.iloveimg.com/upscale-image). Note that this may not always yield the desired result.
