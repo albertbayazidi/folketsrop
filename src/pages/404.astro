@@ -1,7 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import ArticleUi from "../components/navigation_ui/ArticleUi.astro";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
+import Navbar from "../components/navigation_ui/Navbar.astro";
+
 import { fade } from "astro:transitions";
 ---
 
@@ -11,8 +12,8 @@ import { fade } from "astro:transitions";
     <BaseHead title={"Obs..."} />
     <ViewTransitions />
   </head>
-  <body class="sm:px-96 md:px-14">
-    <ArticleUi />
+  <body class="md:w-4/5 md:mx-auto">
+    <Navbar />
     <main transition:animate={fade({ duration: "0.25s" })}>
       <div class="my-10 flex flex-col items-center">
         <img
