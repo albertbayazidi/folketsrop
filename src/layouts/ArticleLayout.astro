@@ -30,12 +30,12 @@ const { post } = Astro.props;
                 class="max-w-[80vw] max-h-[30vh] h-auto rounded-lg mb-6 object-cover"
               />
             )}
-            <article class="max-w-4xl mx-auto border rounded-xl border-gray-300 p-6 bg-white shadow-md mt-10">
+            <article class="max-w-4xl mx-4 border rounded-xl border-gray-300 p-6 bg-white shadow-md my-10">
               <header class="mb-4">
                 <h1 class="text-4xl font-bold text-gray-800">
                   {post.data.title}
                 </h1>
-                <p class="text-sm text-gray-500 mt-2">{post.data.date}</p>
+                <p class="text-sm text-gray-500 mt-3">{post.data.date}</p>
               </header>
               <div class="prose prose-lg text-gray-700 leading-relaxed">
                 {post.body}
