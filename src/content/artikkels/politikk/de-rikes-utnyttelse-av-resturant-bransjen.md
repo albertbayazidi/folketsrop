@@ -1,6 +1,6 @@
 ---
 title: "Resturant bransjen utnyttes av de rike"
-date: "14-08-2024"
+date: "2021-08-14"
 description: "some text"
 author: "test"
 image: "test_bilde.webp"

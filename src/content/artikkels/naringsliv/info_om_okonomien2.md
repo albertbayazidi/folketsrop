@@ -1,6 +1,6 @@
 ---
 title: "Dette er en sak om næringslivet"
-date: "2021-08-11"
+date: "2025-02-11"
 author: "test"
 description: "Tekst om saken"
 image: "resturant.webp"

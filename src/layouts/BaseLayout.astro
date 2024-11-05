@@ -18,14 +18,14 @@ const { head } = Astro.props;
     {/*<CheckTheme />*/}
     <ViewTransitions />
   </head>
-  <body class="px-5 md:mx-2">
+  <body class="md:w-4/5 md:mx-auto">
     <div class="flex mt-5 items-center">
       <Ui />
     </div>
     <Navbar />
     <main transition:animate={fade({ duration: "0.25s" })}>
       <div
-        class="md:w-[calc(100vw-2*28px)] md:h-[calc(100vh-218px)] md:grid md:grid-cols-3 md:grid-flow-col md:gap-4"
+        class="md:h-[calc(100vh-218px)] md:grid md:grid-cols-3 md:grid-flow-col md:gap-4"
       >
         <slot />
       </div>

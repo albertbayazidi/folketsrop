@@ -9,13 +9,13 @@ const { title, image, url } = Astro.props;
 ---
 
 <div
-  class="md:col-span-2 md:flex md:items-center md:justify-center md:pb-0 pb-5"
+  class="md:col-span-2 md:flex md:items-center md:justify-center md:pb-0 pb-5 mx-4"
 >
   <div class="inline-block text-center group static">
     <a href={url} class="block mx-auto">
       <div class="relative overflow-hidden rounded-lg">
         <img
-          class="block max-h-[65vh] rounded-lg transform transition-transform duration-300 group-hover:scale-110"
+          class="block max-h-[65vh] md:max-w-[45vw] rounded-lg transform transition-transform duration-300 group-hover:scale-110"
           src={"/" + image}
           alt={image}
         />

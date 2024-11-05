@@ -1,6 +1,6 @@
 ---
 title: "Dette er en sak om politikk"
-date: "16-09-2024"
+date: "2021-05-11"
 author: "test"
 description: "Tekst om saken"
 image: "politikk.webp"

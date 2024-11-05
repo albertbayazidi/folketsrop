@@ -8,14 +8,18 @@ const navLinks = siteConfig.navLinks || [];
   id="header"
   class="flex flex-col md:flex-row items-start md:items-center"
 >
-  <nav class="w-full md:w-[75vw]">
+  <nav class="w-full">
     <div
-      class="gap-x-4 md:gap-x-6 w-full md:w-full border-b-2 border-gray-200 mb-6 md:mb-10 pt-4 md:pt-8"
+      class="gap-x-4 md:gap-x-6 w-full border-y-2 border-gray-300 mb-6 md:my-5 py-2"
     >
-      <ul class="flex flex-wrap">
+      <ul class="flex flex-wrap w-full justify-between">
         {
-          navLinks.map((item) => (
-            <li>
+          navLinks.map((item, index) => (
+            <li
+              class={`text-center w-full md:w-auto ${
+                index !== navLinks.length - 1 ? "border-b border-gray-200" : ""
+              } md:border-0`}
+            >
               <Link text={item.text} href={item.href} data-navLink />
             </li>
           ))

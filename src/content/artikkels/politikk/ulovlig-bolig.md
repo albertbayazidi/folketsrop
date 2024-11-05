@@ -1,6 +1,6 @@
 ---
 title: "Utleier tjene mer på ulovlige boliger"
-date: "14-08-2024"
+date: "2022-05-11"
 description: "Litt tekst om saken"
 author: "test"
 image: "faveicon.webp"

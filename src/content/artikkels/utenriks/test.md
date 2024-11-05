@@ -1,6 +1,6 @@
 ---
 title: "Kina er verdensledene på grønn energi"
-date: "2022-05-01"
+date: "2028-05-09"
 author: "test"
 description: "Mens USA nekter å ta på seg ansvar har kina blitt dominerende på grønn energi"
 image: "Standaert_solar-farm_web.webp"
@@ -14,3 +14,4 @@ Slik presenteres salgsannonsen for en 12 kvadratmeter stor leilighet på Majorst
 Den består et rom med hybelkjøkken, dusjrom og entré. Men det er ikke søkt om å bygge bad og kjøkken.
 
 Badet har heller ikke eget sluk, og er derfor ikke klassifisert som et våtrom
+

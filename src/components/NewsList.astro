@@ -4,7 +4,7 @@ const { remainingposts } = Astro.props;
 
 {
   remainingposts.length > 0 && (
-    <div class="md:col-span-1 md:overflow-x-hidden md:max-h-[70vh] overflow-y-visible ">
+    <div class="md:col-span-1 md:overflow-x-hidden md:mt-[11vh] md:max-h-[60vh] overflow-y-visible ">
       {remainingposts.map((post: any) => (
         <a
           class="block m-1 p-2 border rounded-lg hover:bg-gray-100"
@@ -23,6 +23,7 @@ const { remainingposts } = Astro.props;
               <p class="text-gray-600  text-ellipsis">
                 {post.data.description}
               </p>
+              <p class="text-gray-600  text-ellipsis">{post.data.date}</p>
             </div>
           </div>
         </a>

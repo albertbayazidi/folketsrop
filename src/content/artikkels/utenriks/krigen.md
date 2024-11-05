@@ -1,6 +1,6 @@
 ---
 title: "Krigen"
-date: "11-08-2024"
+date: "2022-05-01"
 author: "test"
 description: "Tekst om saken"
 image: "gaza2.webp"
