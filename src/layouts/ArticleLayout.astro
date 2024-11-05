@@ -2,7 +2,7 @@
 import { fade } from "astro:transitions";
 import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
-import Ui from "../components/navigation_ui/Ui.astro";
+import Navbar from "../components/navigation_ui/Navbar.astro";
 
 interface Props {
   post?: any;
@@ -12,19 +12,13 @@ const { post } = Astro.props;
 ---
 
 <!doctype html>
-<html>
+<html class="text-gray-900" lang="No">
   <head>
-    <BaseHead
-      title={post.data.title}
-      description={post.data.description}
-      image={post.data.image}
-    />
+    <BaseHead {...post.data} />
     <ViewTransitions />
   </head>
   <body class="md:w-4/5 md:mx-auto">
-    <div class="flex mt-5">
-      <Ui />
-    </div>
+    <Navbar />
     <main transition:animate={fade({ duration: "0.25s" })}>
       {
         post ? (
@@ -36,7 +30,7 @@ const { post } = Astro.props;
                 class="max-w-[80vw] max-h-[30vh] h-auto rounded-lg mb-6 object-cover"
               />
             )}
-            <article class="max-w-4xl mx-auto border rounded-xl border-gray-300 p-6 bg-white mt-10 shadow-md mt-10">
+            <article class="max-w-4xl mx-auto border rounded-xl border-gray-300 p-6 bg-white shadow-md mt-10">
               <header class="mb-4">
                 <h1 class="text-4xl font-bold text-gray-800">
                   {post.data.title}
